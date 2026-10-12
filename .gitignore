@@ -1,0 +1,15 @@
+node_modules
+.netlify
+.vercel
+.grok
+.env
+.env.*
+attachments
+artifacts
+netlify-publish
+sogni-renders
+screenshots
+.project_id
+dist
+.output
+*.log
