@@ -15,7 +15,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Indian Delights on Mayfield Road, Brampton — tandoor breads, slow curries, and late plates. Order on Uber Eats or Skip, or call the kitchen.",
+          "Indian Delights on Mayfield Road, Brampton — tandoor breads, slow curries, and late plates. Order on Uber Eats, Skip, or CraveCart, or call the kitchen.",
       },
     ],
     links: [

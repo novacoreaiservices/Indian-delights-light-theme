@@ -5,6 +5,7 @@ import { clsx } from "clsx";
 const UBER =
   "https://www.ubereats.com/ca/store/indian-delights-mayfield/3LF-ntIJROqJeg1mlIjdwQ";
 const SKIP = "https://www.skipthedishes.com/indian-delights-mayfield-rd";
+const CRAVE = "https://indiandelights.cravcart.com/";
 const MAPS =
   "https://www.google.com/maps/search/?api=1&query=Indian+Delights+3088+Mayfield+Rd+Unit+1+Brampton+ON+L6Z+0E3";
 const IG = "https://www.instagram.com/indiandelights2026/";
@@ -570,6 +571,14 @@ export function Home() {
                     SkipTheDishes
                   </a>
                   <a
+                    href={CRAVE}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex h-12 items-center rounded-full border border-line bg-paper px-5 text-sm font-medium text-ink transition-transform duration-150 active:scale-[0.96]"
+                  >
+                    CraveCart
+                  </a>
+                  <a
                     href={TEL}
                     className="inline-flex h-12 items-center gap-2 rounded-full px-3 text-sm text-ink sm:hidden"
                   >
@@ -858,6 +867,7 @@ export function Home() {
           <div className="flex gap-4">
             <a href={UBER} target="_blank" rel="noreferrer" className="hover:text-ink">Uber Eats</a>
             <a href={SKIP} target="_blank" rel="noreferrer" className="hover:text-ink">Skip</a>
+            <a href={CRAVE} target="_blank" rel="noreferrer" className="hover:text-ink">CraveCart</a>
             <a href={IG} target="_blank" rel="noreferrer" className="hover:text-ink">Instagram</a>
           </div>
         </div>
