@@ -7,75 +7,75 @@ const UBER =
 const SKIP = "https://www.skipthedishes.com/indian-delights-mayfield-rd";
 const MAPS =
   "https://www.google.com/maps/search/?api=1&query=Indian+Delights+3088+Mayfield+Rd+Unit+1+Brampton+ON+L6Z+0E3";
-const IG = "https://www.instagram.com/indiandelightrestaurant/";
+const IG = "https://www.instagram.com/indiandelights2026/";
 const TEL = "tel:+19054956567";
 
 const SHOTS = [
   {
-    src: "/food/butter-chicken.jpg",
-    video: "/food/hero.mp4",
-    title: "Butter chicken",
-    line: "Tomato, cream, a slow simmer",
+    src: "/food/real/chicken-tikka-masala.jpg",
+    video: "/food/real/tikka.mp4",
+    title: "Chicken tikka masala",
+    line: "The bowl from the Uber Eats menu",
   },
   {
-    src: "/food/naan.jpg",
-    video: "/food/naan.mp4",
+    src: "/food/real/naan.jpg",
+    video: "/food/real/naan.mp4",
     title: "Garlic naan",
-    line: "Blistered against clay",
+    line: "Tandoor bread, butter, herbs",
   },
   {
-    src: "/food/palak.jpg",
-    video: "/food/palak.mp4",
-    title: "Palak paneer",
-    line: "Spinach, cream, fresh paneer",
+    src: "/food/real/palak.jpg",
+    video: "/food/real/palak.mp4",
+    title: "Bhuna lahsun palak paneer",
+    line: "Burnt garlic spinach, paneer",
   },
   {
-    src: "/food/biryani.jpg",
-    video: "/food/biryani.mp4",
+    src: "/food/real/chicken-biryani.jpg",
+    video: "/food/real/biryani.mp4",
     title: "Chicken biryani",
-    line: "Saffron basmati, bone-in",
+    line: "Bone-in, as plated for delivery",
   },
   {
-    src: "/food/bhature.jpg",
-    video: "/food/bhature.mp4",
+    src: "/food/real/chole.jpg",
+    video: "/food/real/chole.mp4",
     title: "Chole bhature",
-    line: "Puffed bread, chickpea masala",
+    line: "Puffed bread, onion, pickle",
   },
   {
-    src: "/food/thali.jpg",
-    video: "/food/thali.mp4",
-    title: "The thali",
-    line: "A whole table on one tray",
+    src: "/food/real/veg-thali.jpg",
+    video: "/food/real/thali.mp4",
+    title: "Vegetarian thali",
+    line: "The tray that leaves the kitchen",
   },
   {
-    src: "/food/lassi.jpg",
-    video: "/food/lassi.mp4",
-    title: "Kesar lassi",
-    line: "Saffron, pistachio, cold",
+    src: "/food/real/kulcha.jpg",
+    video: "/food/real/kulcha.mp4",
+    title: "Amritsari kulcha",
+    line: "Stuffed bread with chole",
   },
 ] as const;
 
 const BEATS = [
   {
-    src: "/food/naan.jpg",
-    video: "/food/naan.mp4",
+    src: "/food/real/naan.jpg",
+    video: "/food/real/naan.mp4",
     kicker: "Movement 01",
     title: "The clay goes first.",
-    body: "The tandoor is brought to 480°C before a single naan meets it. Garlic butter, charred bubbles, the smell that reaches the door on Mayfield before you do.",
+    body: "Garlic naan comes off the tandoor butter-brushed, the same basket that shows up on the Uber Eats menu.",
   },
   {
-    src: "/food/palak.jpg",
-    video: "/food/palak.mp4",
+    src: "/food/real/palak.jpg",
+    video: "/food/real/palak.mp4",
     kicker: "Movement 02",
     title: "Then the pot takes its time.",
-    body: "Whole spices toasted each morning. Curries held low — palak paneer with garlic, dal that stays on the heat, gravies finished with cream only at the end.",
+    body: "Bhuna lahsun palak paneer — burnt garlic, cumin, spinach, and paneer, finished the way the kitchen plates it.",
   },
   {
-    src: "/food/thali.jpg",
-    video: "/food/thali.mp4",
+    src: "/food/real/veg-thali.jpg",
+    video: "/food/real/thali.mp4",
     kicker: "Movement 03",
-    title: "Plated late, still bright.",
-    body: "From Amritsari kulcha to a full thali, this is the food the kitchen grew up on. Served in the heart of Brampton, well past midnight on the weekends.",
+    title: "Plated the way it leaves.",
+    body: "The vegetarian thali is rice, two curries, salad, and a gulab jamun. Friday and Saturday the kitchen stays open until 1:00 AM.",
   },
 ] as const;
 
@@ -141,6 +141,7 @@ const MENU: Array<{
   blurb: string;
   veg: boolean;
   flag?: string;
+  photo?: string;
 }> = [
   {
     group: "Tandoor",
@@ -148,6 +149,7 @@ const MENU: Array<{
     price: "19.99",
     blurb: "Potato and paneer stuffed bread from the tandoor, with dahi, achar, butter, and chana.",
     veg: true,
+    photo: "/food/real/kulcha.jpg",
   },
   {
     group: "Tandoor",
@@ -155,6 +157,7 @@ const MENU: Array<{
     price: "4.99",
     blurb: "Butter-brushed, with garlic and a scatter of herbs.",
     veg: true,
+    photo: "/food/real/naan.jpg",
   },
   {
     group: "Curries & rice",
@@ -163,6 +166,7 @@ const MENU: Array<{
     blurb: "Saffron basmati cooked with bone-in chicken. Listed as a buy-one offer on Skip.",
     veg: false,
     flag: "Offer",
+    photo: "/food/real/chicken-biryani.jpg",
   },
   {
     group: "Curries & rice",
@@ -192,6 +196,7 @@ const MENU: Array<{
     price: "13.99",
     blurb: "Two veg curries, dal, rice, butter naan or tandoori roti, salad, and the chef’s dessert.",
     veg: true,
+    photo: "/food/real/veg-thali.jpg",
   },
   {
     group: "Thali",
@@ -199,6 +204,7 @@ const MENU: Array<{
     price: "17.99",
     blurb: "Butter chicken, lamb curry, dal, rice, bread, salad, and dessert.",
     veg: false,
+    photo: "/food/real/nonveg-thali.jpg",
   },
   {
     group: "Thali",
@@ -221,6 +227,7 @@ const MENU: Array<{
     blurb: "Chickpeas in onion-spice masala with puffed bhature. Skip buy-one offer.",
     veg: true,
     flag: "Offer",
+    photo: "/food/real/chole.jpg",
   },
   {
     group: "Street",
@@ -229,6 +236,7 @@ const MENU: Array<{
     blurb: "Samosa, chana, yogurt, mint, and tamarind.",
     veg: true,
     flag: "Offer",
+    photo: "/food/real/chaat.jpg",
   },
   {
     group: "Street",
@@ -243,6 +251,7 @@ const MENU: Array<{
     price: "12.99",
     blurb: "The same wrap with chicken tikka.",
     veg: false,
+    photo: "/food/real/tikka-wrap.jpg",
   },
   {
     group: "Drinks",
@@ -280,6 +289,7 @@ const MENU: Array<{
     blurb: "Amritsari kulcha with chole at the counter, drink included.",
     veg: true,
     flag: "Counter",
+    photo: "/food/real/kulcha.jpg",
   },
   {
     group: "Counter",
@@ -300,13 +310,13 @@ const MENU: Array<{
 ];
 
 const HOURS = [
-  { dow: 0, label: "Sunday", text: "11:00 AM – 11:45 PM", start: 11 * 60, end: 23 * 60 + 45 },
+  { dow: 0, label: "Sunday", text: "12:00 PM – 11:45 PM", start: 12 * 60, end: 23 * 60 + 45 },
   { dow: 1, label: "Monday", text: "1:00 PM – 11:45 PM", start: 13 * 60, end: 23 * 60 + 45 },
   { dow: 2, label: "Tuesday", text: "1:00 PM – 11:45 PM", start: 13 * 60, end: 23 * 60 + 45 },
   { dow: 3, label: "Wednesday", text: "1:00 PM – 11:45 PM", start: 13 * 60, end: 23 * 60 + 45 },
   { dow: 4, label: "Thursday", text: "1:00 PM – 11:45 PM", start: 13 * 60, end: 23 * 60 + 45 },
   { dow: 5, label: "Friday", text: "1:00 PM – 1:00 AM", start: 13 * 60, end: 25 * 60 },
-  { dow: 6, label: "Saturday", text: "11:00 AM – 2:00 AM", start: 11 * 60, end: 26 * 60 },
+  { dow: 6, label: "Saturday", text: "12:00 PM – 1:00 AM", start: 12 * 60, end: 25 * 60 },
 ];
 
 const QUOTES = [
@@ -499,20 +509,20 @@ export function Home() {
               <video
                 ref={videoRef}
                 className="absolute inset-0 h-full w-full object-cover"
-                poster="/food/butter-chicken.jpg"
+                poster="/food/real/chicken-tikka-masala.jpg"
                 autoPlay
                 muted
                 loop
                 playsInline
                 preload="metadata"
-                aria-label="Slow push-in on a bowl of butter chicken in morning light"
+                aria-label="Slow push-in on the chicken tikka masala from the Uber Eats menu"
               >
-                <source src="/food/hero.mp4" type="video/mp4" />
+                <source src="/food/real/tikka.mp4" type="video/mp4" />
               </video>
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ivory via-ivory/15 to-transparent" />
               <div className="absolute top-4 right-4 left-4 flex items-center justify-between gap-3">
                 <p className="glass rounded-full px-3 py-1.5 text-xs tracking-wide text-ink">
-                  Shot 01 · Butter chicken · Mayfield
+                  Shot 01 · Chicken tikka masala · Uber Eats
                 </p>
                 <button
                   type="button"
@@ -727,7 +737,16 @@ export function Home() {
 
           <ul className="mt-6 divide-y divide-line">
             {visible.map((item) => (
-              <li key={item.name} className="grid gap-2 py-5 sm:grid-cols-[1fr_auto] sm:items-baseline sm:gap-8">
+              <li key={item.name} className="grid gap-3 py-5 sm:grid-cols-[auto_1fr_auto] sm:items-center sm:gap-6">
+                {item.photo ? (
+                  <img
+                    src={item.photo}
+                    alt=""
+                    className="h-20 w-20 rounded-2xl object-cover sm:h-24 sm:w-24"
+                  />
+                ) : (
+                  <span className="hidden sm:block sm:w-24" />
+                )}
                 <div>
                   <div className="flex items-baseline gap-3">
                     <h3 className="font-display text-2xl tracking-tight">{item.name}</h3>
@@ -768,9 +787,9 @@ export function Home() {
         <section id="visit" className="mx-auto grid max-w-6xl items-center gap-6 px-4 py-16 md:grid-cols-2 md:px-6 md:py-24">
           <div className="frame relative min-h-[420px]">
             <Film
-              src="/food/lassi.mp4"
-              poster="/food/lassi.jpg"
-              label="Saffron lassi in a tall glass by a bright window"
+              src="/food/real/kulcha.mp4"
+              poster="/food/real/kulcha.jpg"
+              label="Amritsari kulcha with chole, from the Uber Eats menu"
               className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
@@ -808,6 +827,7 @@ export function Home() {
                 </li>
               ))}
             </ul>
+            <p className="mt-3 text-xs text-muted">Hours from Google.</p>
             <div className="mt-6 flex flex-wrap gap-2">
               <a
                 href={MAPS}
