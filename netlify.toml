@@ -1,0 +1,4 @@
+[build]
+  command = "PATH=$PWD/node_modules/.bin:$PATH NITRO_PRESET=netlify node scripts/with-app-env.mjs vite build"
+  publish = "dist"
+  functions = ".netlify/functions-internal"
